@@ -5,7 +5,7 @@
         </title>
     </head>
     <body>
-        <h2>silahkan tanbah data anggota</h2>
+        <h2>silahkan tambah data anggota</h2>
         <br>
         <form method="post" action="proses.php">
             <label for="nama">nama</label>

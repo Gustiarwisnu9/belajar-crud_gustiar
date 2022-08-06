@@ -10,6 +10,21 @@ $thn_terbit = $_POST['thn_terbit'];
 $penerbit = $_POST['penerbit'];
 
 //input data dari form ke database
-mysqli_query($connect,"insert into buku values('','$id_katalog','$judul_buku','$pengarang','$thn_terbit','$penerbit')");
+$input = mysqli_query($connect,"insert into buku values('','$id_katalog','$judul_buku','$pengarang','$thn_terbit','$penerbit')");
 
+if($input){
+    echo "
+    <script>
+        alert('Data Berhasil Ditambahkan');
+        window.location = 'belajarcrud5.php';
+    </script>
+    ";
+}else {
+    echo "
+    <script>
+        alert('Data Gagal Ditambahkan');
+        window.location = 'tambah3.php';
+    </script>
+    ";
+}
 ?>

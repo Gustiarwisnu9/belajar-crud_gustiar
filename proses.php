@@ -10,6 +10,21 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 //input data dari form ke database
-mysqli_query($connect,"insert into anggota values('','$nama','$no_telp','$alamat','$email','$password')");
+$input = mysqli_query($connect,"insert into anggota values('','$nama','$no_telp','$alamat','$email','$password')");
 
+if($input){
+    echo "
+    <script>
+        alert('Data Berhasil Ditambahkan');
+        window.location = 'belajarcrud5.php';
+    </script>
+    ";
+}else {
+    echo "
+    <script>
+        alert('Data Gagal Ditambahkan');
+        window.location = 'tambah.php';
+    </script>
+    ";
+}
 ?>
